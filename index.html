@@ -32,11 +32,11 @@
             <fieldset>
                 <div>
                     <label for="name-surname">Name/Surname</label>
-                    <input type="text" placeholder="e.g. Jane Doe" id="name-surname" required autofocus>
+                    <input type="text" placeholder="e.g. Jane Doe" id="name-surname" required autofocus oninvalid="this.setCustomValidity('Invalid name')">
                 </div>
                 <div>
                     <label for="company">Company</label>
-                    <input type="text" placeholder="To get to know you" id="company" required>
+                    <input type="text" placeholder="To get to know you" id="company" required oninvalid="this.setCustomValidity('Invalid company')">
                 </div>
                 <div>
                     <label for="phone">Tel.</label>
@@ -48,7 +48,7 @@
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" placeholder="For our written communication" id="email" required>
+                    <input type="email" placeholder="For our written communication" id="email" required oninvalid="this.setCustomValidity('Invalid email')">
                 </div>
                 <div>
                     <label for="website">Website</label>
@@ -59,19 +59,19 @@
                 <h3>Specifics</h3>
                 <div>
                     <label for="deadline">Deadline</label>
-                    <input type="date" id="deadline" required>
+                    <input type="date" id="deadline" required oninvalid="this.setCustomValidity('Invalid deadline')">
                 </div>
                 <div>
                     <label for="budget">Budget</label>
-                    <input type="number" placeholder="$5000 - $10,000" id="budget" required>
+                    <input type="number" placeholder="$5000 - $10,000" id="budget" required oninvalid="this.setCustomValidity('Invalid budget')">
                 </div>
                 <div>
                     <label for="current-url">Current URL</label>
-                    <input type="url" placeholder="www.website" id="current-url" required>
+                    <input type="url" placeholder="www.website" id="current-url" required oninvalid="this.setCustomValidity('Invalid url (you have to include the whole thing, including https)')">
                 </div>
                 <div>
                     <label for="target-audience">Target Audience</label>
-                    <input type="text" placeholder="Your specific target audience" id="target-audience" required>
+                    <input type="text" placeholder="Your specific target audience" id="target-audience" required oninvalid="this.setCustomValidity('Invalid target audience')">
                 </div>
                 <div>
                     <label for="description">Project Description</label>
@@ -80,8 +80,9 @@
             </fieldset>
             <div>
                 <p>By completing and sending the data, you agree to the privacy policy.</p>
+                <input type="checkbox" id="accept" required oninvalid="this.setCustomValidity('You must accept!')">
                 <label for="accept">Accept</label>
-                <input type="checkbox" id="accept" required>
+        
                 
             </div>
             <div>
